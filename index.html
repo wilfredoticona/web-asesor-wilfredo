@@ -1,17 +1,554 @@
 <!doctype html>
-<html>
+<html lang="es">
   <head>
-    <title>Asesor de Tesis</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Asesoría profesional de tesis universitarias. Guía metodológica, apoyo en investigación y revisión de escritura académica."
+    />
+    <meta name="author" content="Dr. Wilfredo" />
+
+    <title>Asesor de Tesis | Asesoría Académica Profesional</title>
+
+    <!-- Google Fonts: Merriweather (headings) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6 for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body>
-    <h1>Asesor de Tesis</h1>
+    <!-- ================================================
+       NAVBAR — sticky, transparent → solid on scroll
+  ================================================ -->
+    <nav class="navbar" id="navbar">
+      <div class="container nav-container">
+        <!-- Brand / Logo -->
+        <a href="#hero" class="nav-logo">
+          <i class="fas fa-graduation-cap nav-logo-icon"></i>
+          <span>Asesor<strong>Tesis</strong></span>
+        </a>
 
-    <p>Bienvenido a mi página de asesoría académica.</p>
+        <!-- Desktop links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about" class="nav-link">Sobre mí</a></li>
+          <li><a href="#videos" class="nav-link">Videos</a></li>
+          <li><a href="#services" class="nav-link">Servicios</a></li>
+          <li><a href="#contact" class="btn btn-nav">Contactar</a></li>
+        </ul>
 
-    <h2>Video destacado</h2>
+        <!-- Hamburger button (mobile only) -->
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Rfv_zbinq7Q" allowfullscreen> </iframe>
+    <!-- ================================================
+       HERO SECTION
+       Deep navy gradient + dot grid overlay
+  ================================================ -->
+    <section id="hero" class="hero">
+      <div class="hero-overlay"></div>
+      <!-- decorative grid -->
+
+      <div class="container hero-content reveal">
+        <p class="hero-eyebrow">
+          <span class="eyebrow-dot"></span>
+          Asesoría Académica Universitaria
+        </p>
+
+        <h1 class="hero-title">
+          Tu tesis, con respaldo<br />
+          <span class="hero-title-accent">profesional y metodológico</span>
+        </h1>
+
+        <p class="hero-desc">
+          Guía experta en cada etapa de tu proceso de investigación. Desde la formulación del problema hasta la
+          sustentación final.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary"> <i class="fas fa-calendar-check"></i> Agendar consulta </a>
+          <a href="#videos" class="btn btn-ghost"> <i class="fas fa-play-circle"></i> Ver mis videos </a>
+        </div>
+
+        <!-- Quick stats bar -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <strong class="stat-num">+200</strong>
+            <span class="stat-label">Tesis asesoradas</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <strong class="stat-num">15+</strong>
+            <span class="stat-label">Años de experiencia</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <strong class="stat-num">100%</strong>
+            <span class="stat-label">Compromiso</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decorative wave divider -->
+      <div class="hero-wave">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ================================================
+       ABOUT SECTION
+  ================================================ -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Photo column -->
+          <div class="about-photo-col reveal">
+            <div class="photo-frame">
+              <!--
+              Replace images/advisor.jpg with the real photo.
+              The placeholder shows initials if the image is missing.
+            -->
+              <img
+                src="images/foto.jpeg"
+                alt="Foto del asesor Wilfredo"
+                class="advisor-photo"
+                onerror="this.parentElement.classList.add('photo-missing')"
+              />
+              <div class="photo-initials" aria-hidden="true">W</div>
+            </div>
+          </div>
+
+          <!-- Text column -->
+          <div class="about-content reveal">
+            <p class="section-eyebrow">Sobre el asesor</p>
+            <h2 class="section-title">Dr. Wilfredo</h2>
+
+            <p class="about-bio">
+              Con más de 15 años de experiencia en investigación académica y asesoría de tesis universitarias, he
+              acompañado a cientos de estudiantes a concluir con éxito sus proyectos de grado en diversas áreas del
+              conocimiento.
+            </p>
+            <p class="about-bio">
+              Mi enfoque combina rigor metodológico con acompañamiento personalizado, adaptando el proceso a las
+              necesidades específicas de cada investigación y cada estudiante.
+            </p>
+
+            <!-- Academic credentials list -->
+            <ul class="credentials-list">
+              <li>
+                <i class="fas fa-circle-check cred-icon"></i>
+                Doctor en Ciencias de la Educación
+              </li>
+              <li>
+                <i class="fas fa-circle-check cred-icon"></i>
+                Magíster en Metodología de la Investigación
+              </li>
+              <li>
+                <i class="fas fa-circle-check cred-icon"></i>
+                Docente universitario en activo
+              </li>
+              <li>
+                <i class="fas fa-circle-check cred-icon"></i>
+                Investigador registrado en CONCYTEC
+              </li>
+            </ul>
+
+            <a href="#contact" class="btn btn-primary"> <i class="fas fa-comments"></i> Hablar con el asesor </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+       VIDEOS SECTION
+       Featured video + 3-column grid
+  ================================================ -->
+    <section id="videos" class="section videos bg-light">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Contenido académico</p>
+          <h2 class="section-title">Videos de asesoría</h2>
+          <p class="section-desc">Recursos gratuitos para apoyar tu proceso de investigación y redacción de tesis.</p>
+        </div>
+
+        <!-- ── FEATURED video (large) ── -->
+        <div class="featured-video reveal">
+          <div class="video-embed-wrapper">
+            <!--
+            To update: replace the YouTube video ID in the src URL.
+            Format: https://www.youtube.com/embed/VIDEO_ID
+          -->
+            <iframe
+              src="https://www.youtube.com/embed/Rfv_zbinq7Q"
+              title="Cómo estructurar tu tesis paso a paso"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              allowfullscreen
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+          <div class="featured-video-meta">
+            <span class="video-tag tag-featured"> <i class="fas fa-star"></i> Video destacado </span>
+            <h3>Cómo estructurar tu tesis paso a paso</h3>
+            <p>
+              Una guía completa para organizar tu investigación desde el planteamiento del problema hasta las
+              conclusiones finales.
+            </p>
+          </div>
+        </div>
+
+        <!-- ── VIDEO GRID (3 cards) ── -->
+        <!--
+        To add or change videos:
+        1. Duplicate a .video-card block
+        2. Replace the YouTube video ID in src="..."
+        3. Update the title, tag, and description text
+      -->
+        <div class="video-grid">
+          <article class="video-card reveal">
+            <div class="video-embed-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/Rfv_zbinq7Q"
+                title="Marco teórico: errores comunes"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+            <div class="video-card-meta">
+              <span class="video-tag tag-method">Metodología</span>
+              <h4>Marco teórico: errores comunes</h4>
+              <p>Aprende a construir un marco teórico sólido y coherente con tu investigación.</p>
+            </div>
+          </article>
+
+          <article class="video-card reveal">
+            <div class="video-embed-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/Rfv_zbinq7Q"
+                title="APA 7ma edición: guía práctica"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+            <div class="video-card-meta">
+              <span class="video-tag tag-writing">Redacción</span>
+              <h4>APA 7ma edición: guía práctica</h4>
+              <p>Domina las normas de citación y referencias bibliográficas APA actualizadas.</p>
+            </div>
+          </article>
+
+          <article class="video-card reveal">
+            <div class="video-embed-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/Rfv_zbinq7Q"
+                title="Análisis estadístico básico"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+            <div class="video-card-meta">
+              <span class="video-tag tag-stats">Estadística</span>
+              <h4>Análisis estadístico básico</h4>
+              <p>Herramientas estadísticas esenciales para tu investigación cuantitativa.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+       SERVICES SECTION
+       4-card grid, center card highlighted
+  ================================================ -->
+    <section id="services" class="section services">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">¿En qué te ayudo?</p>
+          <h2 class="section-title">Servicios de asesoría</h2>
+          <p class="section-desc">Acompañamiento integral en cada etapa de tu investigación académica.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="service-card reveal">
+            <div class="service-icon-wrap">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3>Asesoría de tesis</h3>
+            <p>
+              Acompañamiento personalizado desde la elección del tema hasta la sustentación final de tu tesis de grado o
+              posgrado.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Selección y delimitación del tema</li>
+              <li><i class="fas fa-check"></i> Formulación del problema e hipótesis</li>
+              <li><i class="fas fa-check"></i> Diseño de objetivos</li>
+              <li><i class="fas fa-check"></i> Revisión de capítulos</li>
+            </ul>
+          </div>
+
+          <!-- Card 2 — FEATURED -->
+          <div class="service-card service-card--featured reveal">
+            <div class="service-badge-top">Más solicitado</div>
+            <div class="service-icon-wrap">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h3>Guía metodológica</h3>
+            <p>
+              Orientación experta en el diseño y aplicación de la metodología de investigación adecuada para tu estudio.
+            </p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Enfoques cuantitativo y cualitativo</li>
+              <li><i class="fas fa-check"></i> Diseño de instrumentos</li>
+              <li><i class="fas fa-check"></i> Validez y confiabilidad</li>
+              <li><i class="fas fa-check"></i> Análisis e interpretación de datos</li>
+            </ul>
+            <a href="#contact" class="btn btn-white mt-auto">Solicitar ahora</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card reveal">
+            <div class="service-icon-wrap">
+              <i class="fas fa-magnifying-glass"></i>
+            </div>
+            <h3>Apoyo en investigación</h3>
+            <p>Asistencia en la búsqueda y gestión de fuentes bibliográficas académicas confiables y actualizadas.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Bases de datos académicas</li>
+              <li><i class="fas fa-check"></i> Gestión de referencias (Zotero)</li>
+              <li><i class="fas fa-check"></i> Estado del arte</li>
+              <li><i class="fas fa-check"></i> Revisión sistemática</li>
+            </ul>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card reveal">
+            <div class="service-icon-wrap">
+              <i class="fas fa-pen-nib"></i>
+            </div>
+            <h3>Revisión académica</h3>
+            <p>Corrección y mejora del estilo, coherencia y normas APA de tu documento académico.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Ortografía y gramática</li>
+              <li><i class="fas fa-check"></i> Estilo científico</li>
+              <li><i class="fas fa-check"></i> Normas APA 7ma edición</li>
+              <li><i class="fas fa-check"></i> Detección de plagio (Turnitin)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+       CONTACT SECTION
+  ================================================ -->
+    <section id="contact" class="section contact bg-light">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">¿Listo para empezar?</p>
+          <h2 class="section-title">Contáctame hoy</h2>
+          <p class="section-desc">Agenda una consulta gratuita y conversemos sobre tu proyecto de investigación.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: contact info -->
+          <div class="contact-info reveal">
+            <h3>Información de contacto</h3>
+            <p class="contact-intro">Estoy disponible de lunes a viernes. Respondo en menos de 24 horas.</p>
+
+            <div class="contact-items">
+              <!-- Email -->
+              <a href="mailto:wilon.research@gmail.com" class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-item-text">
+                  <strong>Correo electrónico</strong>
+                  <span>wilon.research@gmail.com</span>
+                </div>
+              </a>
+
+              <!-- WhatsApp -->
+              <a
+                href="https://wa.me/51970133693"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-item contact-item--wa"
+              >
+                <div class="contact-item-icon">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-item-text">
+                  <strong>WhatsApp</strong>
+                  <span>+51 970 133 693</span>
+                </div>
+              </a>
+
+              <!-- Schedule -->
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-item-text">
+                  <strong>Horario de atención</strong>
+                  <span>Lun – Vie, 9:00 am – 6:00 pm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: CTA card -->
+          <div class="contact-cta-card reveal">
+            <i class="fab fa-whatsapp contact-cta-icon"></i>
+            <h3>Escríbeme directamente</h3>
+            <p>La forma más rápida de coordinar tu primera consulta gratuita.</p>
+
+            <!--
+            Update the phone number in href="https://wa.me/PHONENUMBER"
+            The message is URL-encoded in the ?text= parameter.
+          -->
+            <a
+              href="https://wa.me/51970133693?text=Hola%2C%20me%20interesa%20la%20asesor%C3%ADa%20de%20tesis.%20%C2%BFPodemos%20coordinar%20una%20consulta%3F"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp"
+            >
+              <i class="fab fa-whatsapp"></i> Iniciar conversación
+            </a>
+
+            <a href="mailto:wilon.research@gmail.com" class="btn btn-outline-primary">
+              <i class="fas fa-envelope"></i> Enviar correo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+       FOOTER
+  ================================================ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a href="#hero" class="nav-logo footer-logo">
+              <i class="fas fa-graduation-cap nav-logo-icon"></i>
+              <span>Asesor<strong>Tesis</strong></span>
+            </a>
+            <p>
+              Asesoría académica profesional para investigadores universitarios que buscan excelencia en su proceso de
+              tesis.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Canal de YouTube" class="social-link">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="#" aria-label="Perfil de LinkedIn" class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" aria-label="Página de Facebook" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick nav -->
+          <div class="footer-nav">
+            <h4>Navegación</h4>
+            <ul>
+              <li><a href="#about">Sobre mí</a></li>
+              <li><a href="#videos">Videos</a></li>
+              <li><a href="#services">Servicios</a></li>
+              <li><a href="#contact">Contacto</a></li>
+            </ul>
+          </div>
+
+          <!-- Services nav -->
+          <div class="footer-nav">
+            <h4>Servicios</h4>
+            <ul>
+              <li><a href="#services">Asesoría de tesis</a></li>
+              <li><a href="#services">Guía metodológica</a></li>
+              <li><a href="#services">Apoyo en investigación</a></li>
+              <li><a href="#services">Revisión académica</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact info -->
+          <div class="footer-contact">
+            <h4>Contacto</h4>
+            <p><i class="fas fa-envelope"></i> wilon.research@gmail.com</p>
+            <p><i class="fab fa-whatsapp"></i> +51 970 133 693</p>
+            <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 AsesorTesis. Todos los derechos reservados.</p>
+          <p>Diseñado para la excelencia académica.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
   </body>
 </html>
